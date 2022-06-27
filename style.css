@@ -163,3 +163,17 @@ input[type=text],input[type=date],input[type=checkbox],#readings, select {
         
     }
 }
+
+#awards-add-input{
+    margin-right: 0.5rem;
+    
+}
+
+#awards-add-input-div{
+    justify-content: flex-start;
+}
+
+#awards-rmv-btn{
+    padding: 0 10px 0 10px;
+    margin-left: 5px;
+}

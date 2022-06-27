@@ -20,6 +20,10 @@ function writeFullName() {
   for (const fn of firstNames) {
     fn.innerText = fullName_F.value;
   }
+
+  //galleries
+  let galleries_A = document.getElementById("galleries");
+  galleries_A.innerText = `${fullName_F.value} galleries`;
 }
 
 //nick name
@@ -74,8 +78,20 @@ function writeNetworth() {
   }
 }
 
+//awards
+let awards_F = document.getElementById("awards-add-input");
+
+document.getElementById("awards-add-btn").addEventListener("click", addAward);
+document.getElementById("awards-rmv-btn").addEventListener("click", addAward);
+
+function addAward() {
+  let awards_L = document.getElementById("awards-list");
+  if (awards_F.value != "") {
+    awards_L.innerHTML += `<li>${awards_F.value}</li>`;
+  }
+}
+
 //gender
-gender;
 let gender_F = document.getElementById("gender");
 gender_F.addEventListener("change", writeGender);
 
