@@ -82,13 +82,44 @@ function writeNetworth() {
 let awards_F = document.getElementById("awards-add-input");
 
 document.getElementById("awards-add-btn").addEventListener("click", addAward);
-document.getElementById("awards-rmv-btn").addEventListener("click", addAward);
+document.getElementById("awards-rmv-btn").addEventListener("click", rmvAward);
 
 function addAward() {
   let awards_L = document.getElementById("awards-list");
+  let list = Array.from(awards_L.getElementsByTagName("li"));
+  let award_Para = document.getElementById("award-para");
+  award_Para.innerHTML = `<span class="celeb_gender_active">${
+    fullName_F.value
+  }</span> currently have
+  ${list.length + 1} awards.`;
+
   if (awards_F.value != "") {
     awards_L.innerHTML += `<li>${awards_F.value}</li>`;
   }
+  awards_F.value = "";
+}
+
+function rmvAward() {
+  let awards_L = document.getElementById("awards-list");
+  let list = Array.from(awards_L.getElementsByTagName("li"));
+  list.pop();
+  console.log(list);
+  let tempNode = document.createElement("div");
+  for (const l of list) {
+    tempNode.appendChild(l);
+  }
+  awards_L.innerHTML = tempNode.innerHTML;
+
+  let award_Para = document.getElementById("award-para");
+  if (list.length != 0) {
+    award_Para.innerHTML = `<span class="celeb_gender_active">${fullName_F.value}</span> currently have
+    ${list.length} awards.`;
+  } else {
+    award_Para.innerHTML = `<span class="celeb_gender_active">${fullName_F.value}</span> currently doesn't have
+    any awards.`;
+  }
+
+  //awards_L = document.createTextNode(list);
 }
 
 //gender
