@@ -865,6 +865,11 @@ function handleF9() {
   }
 }
 
+function copyTitle() {
+  let articleTitle = `${fullName_F.value} - Biography, Age, Height, Nethworth, Relationships, Wiki and More.`;
+  navigator.clipboard.writeText(articleTitle);
+}
+
 function copyArticle() {
   let p1 = document.getElementById("paragraph-1");
   let p2 = document.getElementById("paragraph-2");
@@ -906,8 +911,6 @@ function copyArticle() {
   // document.execCommand("copy", false, null);
   // document.body.removeChild(dummy);
   navigator.clipboard.writeText(fullaArticleHTML);
-
-  console.log("Here!");
 }
 
 function copyTags() {
