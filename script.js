@@ -632,7 +632,7 @@ twitterFollowers_F.addEventListener("input", writeTwitterFollowers);
 
 function writeInstaID() {
   let instaID_A = document.getElementById("celeb-insta-id");
-  instaID_A.innerText = `@${instaID_F.value}`;
+  instaID_A.innerHTML = `<a href="https://www.instagram.com/${instaID_F.value}" rel="nofollow" target="_blank">@${instaID_F.value}</a>`;
 }
 function writeInstaFollowers() {
   let instaFollowers_A = document.getElementById("celeb-insta-followers");
@@ -640,7 +640,7 @@ function writeInstaFollowers() {
 }
 function writeTwitterID() {
   let twitterID_A = document.getElementById("celeb-twitter-id");
-  twitterID_A.innerText = `@${twitterID_F.value}`;
+  twitterID_A.innerHTML = `<a href="https://www.twitter.com/${twitterID_F.value}" rel="nofollow" target="_blank">@${twitterID_F.value}</a>`;
 }
 function writeTwitterFollowers() {
   let twitterFollowers_A = document.getElementById("celeb-twitter-followers");
