@@ -231,7 +231,7 @@
                 </tr>
                 <tr>
                   <td>Date of Birth</td>
-                  <td id="celeb-dob">yyyy-mm-dd</td>
+                  <td id="celeb-dob">1995-June-06</td>
                 </tr>
                 <tr>
                   <td>Age(as in 2022)</td>
@@ -281,6 +281,22 @@
             Old. <span id="para-gender">He</span> was born on
             <span id="para-date">➖</span>.
           </p>
+
+          <script type="text/JavaScript">
+            (function() {
+                   let dobtime = document.getElementById("celeb-dob");
+                   let paraAge = document.getElementById("para-age");
+                   let dobArr = dobtime.innerText.split("-");
+                   let birthYear = dobArr[0];
+                   let currentYear = new Date().getFullYear();
+                   let age = currentYear - birthYear;
+                   console.log(currentYear);
+                   console.log(birthYear);
+                   console.log(age);
+                   paraAge.innerText = age;
+
+                   })();
+          </script>
         </div>
         <div id="body-info">
           <h4><span id="Body_Structure_Info">Body Structure Info</span></h4>

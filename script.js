@@ -215,8 +215,8 @@ function writeBirthday() {
   let res = str.split("-"); // turn the date into a list format (Split by / if needed)
   console.log(res);
   let months = [
-    "Jan",
-    "Feb",
+    "January",
+    "February",
     "March",
     "April",
     "May",
@@ -230,7 +230,8 @@ function writeBirthday() {
   ];
   console.log(months[parseInt(res[1], 10) - 1]); // month name
   formattedDate = `${res[0]}-${months[res[1] - 1]}-${res[2]}`;
-  console.log(formattedDate);
+  // formattedDateX = `${res[0]}-${months[res[1] - 1]}-${res[2]}`;
+  console.log("DATE", formattedDate);
   let birthday_A = document.getElementById("celeb-dob");
   let paraBirthday = document.getElementById("para-date");
   let age_A = document.getElementById("celeb-age");
