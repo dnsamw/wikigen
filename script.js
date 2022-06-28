@@ -925,11 +925,13 @@ function copyArticle() {
   let wiki_info = document.getElementById("wiki-info");
   let dob_info = document.getElementById("dob-info");
   let body_info = document.getElementById("body-info");
+  let netWorthInfoh4 = document.getElementById("networt-info-title");
   let p3 = document.getElementById("networt-info");
   let personal_info = document.getElementById("personal-info");
   let edu_info = document.getElementById("edu-info");
   let award_info = document.getElementById("award-info");
   let fav_info = document.getElementById("fav-info");
+  let familyInfoh4 = document.getElementById("family-info-title");
   let p4 = document.getElementById("family-info");
   let family_info = document.getElementById("family-info-tbl");
   let relationship_info = document.getElementById("relationship-info");
@@ -941,12 +943,14 @@ function copyArticle() {
     toc.innerHTML +
     wiki_info.innerHTML +
     dob_info.innerHTML +
-    body_info.innerHTML
+    body_info.innerHTML +
+    netWorthInfoh4.innerHTML
   }<p>${p3.innerText}</p>${
     personal_info.innerHTML +
     edu_info.innerHTML +
     award_info.innerHTML +
-    fav_info.innerHTML
+    fav_info.innerHTML +
+    familyInfoh4.innerHTML
   }<p>${p4.innerText}</p>${
     family_info.innerHTML + relationship_info.innerHTML + facts_info.innerHTML
   }`;
