@@ -640,7 +640,11 @@ function writeInstaFollowers() {
 }
 function writeTwitterID() {
   let twitterID_A = document.getElementById("celeb-twitter-id");
-  twitterID_A.innerHTML = `<a href="https://www.twitter.com/${twitterID_F.value}" rel="nofollow" target="_blank">@${twitterID_F.value}</a>`;
+  if (twitterID_F.value != "") {
+    twitterID_A.innerHTML = `<a href="https://www.twitter.com/${twitterID_F.value}" rel="nofollow" target="_blank">@${twitterID_F.value}</a>`;
+  } else {
+    twitterID_A.innerHTML = "N/A";
+  }
 }
 function writeTwitterFollowers() {
   let twitterFollowers_A = document.getElementById("celeb-twitter-followers");
@@ -937,7 +941,9 @@ function copyArticle() {
   let relationship_info = document.getElementById("relationship-info");
   let facts_info = document.getElementById("facts-info");
 
-  let fullaArticleHTML = `<div><p id='celeb-intro'>${p1.innerText}</p><p>${
+  let fullaArticleHTML = `<div id="wiki-article"><div><p id='celeb-intro'>${
+    p1.innerText
+  }</p><div id="celeb-img"><!--REPLACE IMAGE HERE--><img src="https://via.placeholder.com/150"><!--REPLACE IMAGE HERE--></div><p>${
     p2.innerText
   }</p> </div>${
     toc.innerHTML +
@@ -953,7 +959,7 @@ function copyArticle() {
     familyInfoh4.innerHTML
   }<p>${p4.innerText}</p>${
     family_info.innerHTML + relationship_info.innerHTML + facts_info.innerHTML
-  }`;
+  }</div>`;
 
   // let dummy = document.createElement("textarea");
   // dummy.style.display = "none";
