@@ -164,7 +164,7 @@ input[type=text],input[type=date],input[type=checkbox],#readings, select {
     }
 }
 
-#awards-add-input{
+#awards-add-input,#fact-add-input{
     margin-right: 0.5rem;
     
 }
@@ -173,7 +173,7 @@ input[type=text],input[type=date],input[type=checkbox],#readings, select {
     justify-content: flex-start;
 }
 
-#awards-rmv-btn{
+#awards-rmv-btn,#fact-rmv-btn{
     padding: 0 10px 0 10px;
     margin-left: 5px;
 }

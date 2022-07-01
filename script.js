@@ -81,9 +81,38 @@ function writeNetworth() {
 //awards
 let awards_F = document.getElementById("awards-add-input");
 
+let fact_F = document.getElementById("fact-add-input");
+
 document.getElementById("awards-add-btn").addEventListener("click", addAward);
 document.getElementById("awards-rmv-btn").addEventListener("click", rmvAward);
 
+document.getElementById("fact-add-btn").addEventListener("click", addFact);
+document.getElementById("fact-rmv-btn").addEventListener("click", rmvFact);
+
+function addFact() {
+  let facts_L = document.getElementById("facts-list");
+
+  let list = Array.from(facts_L.getElementsByTagName("li"));
+
+  if (fact_F.value != "") {
+    facts_L.innerHTML += `<li>${fact_F.value}</li>`;
+  }
+  fact_F.value = "";
+}
+
+function rmvFact() {
+  let facts_L = document.getElementById("facts-list");
+  let list = Array.from(facts_L.getElementsByTagName("li"));
+  list.pop();
+  console.log(list);
+  let tempNode = document.createElement("div");
+  for (const l of list) {
+    tempNode.appendChild(l);
+  }
+  facts_L.innerHTML = tempNode.innerHTML;
+}
+
+//==============================================================
 function addAward() {
   let awards_L = document.getElementById("awards-list");
   let list = Array.from(awards_L.getElementsByTagName("li"));
