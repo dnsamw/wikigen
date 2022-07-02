@@ -9,7 +9,6 @@ let fullName_F = document.getElementById("full-name");
 fullName_F.addEventListener("input", writeFullName);
 
 function writeFullName() {
-  console.log(fullName_F.value);
   let fullName_A = document.getElementById("celeb-name");
   let paraName = document.getElementById("para-name");
   fullName_A.innerText = fullName_F.value;
@@ -92,7 +91,7 @@ document.getElementById("fact-rmv-btn").addEventListener("click", rmvFact);
 function addFact() {
   let facts_L = document.getElementById("facts-list");
 
-  let list = Array.from(facts_L.getElementsByTagName("li"));
+  //let list = Array.from(facts_L.getElementsByTagName("li"));
 
   if (fact_F.value != "") {
     facts_L.innerHTML += `<li>${fact_F.value}</li>`;
@@ -132,7 +131,7 @@ function rmvAward() {
   let awards_L = document.getElementById("awards-list");
   let list = Array.from(awards_L.getElementsByTagName("li"));
   list.pop();
-  console.log(list);
+  //console.log(list);
   let tempNode = document.createElement("div");
   for (const l of list) {
     tempNode.appendChild(l);
@@ -147,8 +146,6 @@ function rmvAward() {
     award_Para.innerHTML = `<span class="celeb_gender_active">${fullName_F.value}</span> currently doesn't have
     any awards.`;
   }
-
-  //awards_L = document.createTextNode(list);
 }
 
 //gender
@@ -203,8 +200,6 @@ function writeGender() {
       fn.innerText = "His";
     }
   }
-  //   let gender_A = document.getElementById("celeb-gender");
-  //   gender_A.innerText =gender_F.value;
 }
 
 //known facts
@@ -301,7 +296,7 @@ let debut_F = document.getElementById("debut");
 debut_F.addEventListener("input", writeDebutYear);
 
 function writeDebutYear() {
-  console.log(location_F.value);
+  //console.log(location_F.value);
   let debut_A = document.getElementById("celeb-debut");
   debut_A.innerText = debut_F.value;
 }
@@ -311,7 +306,7 @@ let state_F = document.getElementById("state");
 state_F.addEventListener("input", writeState);
 
 function writeState() {
-  console.log(state_F.value);
+  //console.log(state_F.value);
   // let state_A = document.getElementById("celeb-state");
   // state_A.innerText = state_F.value;
   let celebStates = document.getElementsByClassName("celeb_state");
@@ -328,7 +323,7 @@ let country_F = document.getElementById("country");
 country_F.addEventListener("input", writeCountry);
 
 function writeCountry() {
-  console.log(country_F.value);
+  // console.log(country_F.value);
   // let country_A = document.getElementById("celeb-country");
   // country_A.innerText = country_A.value;
 
@@ -990,13 +985,6 @@ function copyArticle() {
     family_info.innerHTML + relationship_info.innerHTML + facts_info.innerHTML
   }</div>`;
 
-  // let dummy = document.createElement("textarea");
-  // dummy.style.display = "none";
-  // document.body.appendChild(dummy);
-  // dummy.value = fullaArticleHTML;
-  // dummy.select();
-  // document.execCommand("copy", false, null);
-  // document.body.removeChild(dummy);
   navigator.clipboard.writeText(fullaArticleHTML);
 }
 
