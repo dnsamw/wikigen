@@ -403,6 +403,30 @@ function writeZodiacSign() {
   }
 }
 
+// randomize zodiac sign
+document
+  .getElementById("zodiac-add-btn")
+  .addEventListener("click", randomZodiacSign);
+function randomZodiacSign() {
+  let signArr = [
+    "Aries",
+    "Taurus",
+    "Gemini",
+    "Cancer",
+    "Leo",
+    "Virgo",
+    "Libra",
+    "Scorpio",
+    "Sagittarius",
+    "Capricorn",
+    "Aquarius",
+    "Pisces",
+  ];
+  let randomSign = signArr[Math.floor(Math.random() * signArr.length)];
+  console.log(randomSign);
+  zodiacsign_F.value = randomSign;
+}
+
 //height
 let height_F = document.getElementById("height");
 height_F.addEventListener("input", writeHeight);
