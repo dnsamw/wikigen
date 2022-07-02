@@ -1,4 +1,7 @@
-html{scroll-behavior:smooth}
+html,body {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
 
 body{
     background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);

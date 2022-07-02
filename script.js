@@ -424,9 +424,13 @@ function randomZodiacSign() {
   ];
   let randomSign = signArr[Math.floor(Math.random() * signArr.length)];
   console.log(randomSign);
+  let celebZodiacSigns = document.getElementsByClassName("celeb_zodiac_sign");
   let zodiacsign_A = document.getElementById("celeb-zodiacsign");
   zodiacsign_F.value = randomSign;
   zodiacsign_A.innerText = randomSign;
+  for (const fn of celebZodiacSigns) {
+    fn.innerText = randomSign;
+  }
 }
 
 //height
