@@ -65,11 +65,18 @@ justify-content: space-between;
     text-decoration: none;
 }
 
+
+
 input[type=text],input[type=date],input[type=checkbox],#readings, select {
     margin-right: 5vw;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+
+  .ib-grp{
+    margin-right: 5vw;
+    display: flex;
   }
 
   ::-webkit-scrollbar {
@@ -162,6 +169,19 @@ input[type=text],input[type=date],input[type=checkbox],#readings, select {
         display: flex;
         
     }
+}
+
+.ib-grp > input{
+    margin-right: 0;
+    width: 6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 100%!important;
+}
+
+.ib-grp > button{
+    margin-left: 0.4rem;
 }
 
 #awards-add-input,#fact-add-input{
