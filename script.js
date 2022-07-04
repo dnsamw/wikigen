@@ -574,6 +574,33 @@ function randomAnimal() {
   document.getElementById("celeb-animal").innerText = random_animal;
 }
 
+//random hobbies
+document
+  .getElementById("rand-hobby-btn")
+  .addEventListener("click", randomHobby);
+
+function randomHobby() {
+  let hobbies = [
+    "Tick toking",
+    "Watching Movies",
+    "Cooking",
+    "Nail Art",
+    "Photography",
+    "Yoga",
+    "Gardening",
+    "Dancing",
+    "Singing",
+    "Listening to music",
+    "Vlogging",
+    "Shopping",
+    "Traveling",
+  ];
+
+  let randomHobby = hobbies[Math.floor(Math.random() * hobbies.length)];
+  hobby_F.value = randomHobby;
+  document.getElementById("celeb-hobby").innerText = randomHobby;
+}
+
 //change ^ maritial status
 document
   .getElementById("rel-status-btn")
