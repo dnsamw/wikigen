@@ -574,6 +574,22 @@ function randomAnimal() {
   document.getElementById("celeb-animal").innerText = random_animal;
 }
 
+//random cars
+document.getElementById("rand-car-btn").addEventListener("click", randomCar);
+
+function randomCar() {
+  let cars = [
+    "Hyundai Accent",
+    "Honda Civic Sedan",
+    "Mazda Miata",
+    "Toyota Vezel",
+    "Range Rover",
+  ];
+  let randomCar = cars[Math.floor(Math.random() * cars.length)];
+  car_F.value = randomCar;
+  document.getElementById("celeb-car").innerText = randomCar;
+}
+
 //random hobbies
 document
   .getElementById("rand-hobby-btn")
