@@ -475,6 +475,45 @@ function randomColor() {
   document.getElementById("celeb-color").innerText = randomColor;
 }
 
+document.getElementById("rand-food-btn").addEventListener("click", randomFood);
+
+function randomFood() {
+  let foods = [
+    "Cake",
+    "Chocolate",
+    "Pizza",
+    "Ice-Cream",
+    "Cookies",
+    "Pasta",
+    "Veggie Burger",
+    "Chinese Fried Rice",
+    "Nasi Goreng",
+    "Pudding",
+    "Fruit Salad",
+    "Chicken Burger",
+    "Pizza Burger",
+    "Ramen Noodles",
+    "Cheese Pasta",
+    "Kottu",
+    "Rotti and Lunu Miris",
+    "Lump Rice",
+    "Milk Rice",
+    "Egg Hoppers",
+    "Pol Rotti and Seeni Sambal",
+    "String Hoppers",
+    "Yellow Rice",
+    "Muffins",
+    "Pan Cakes",
+    "Mac and Cheese",
+    "Waffles",
+    "Tacos",
+    "Cheese Cake",
+  ];
+  let randomFood = foods[Math.floor(Math.random() * foods.length)];
+  food_F.value = randomFood;
+  document.getElementById("celeb-food").innerText = randomFood;
+}
+
 //change ^ maritial status
 document
   .getElementById("rel-status-btn")
