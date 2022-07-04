@@ -433,6 +433,48 @@ function randomZodiacSign() {
   }
 }
 
+//random color,food
+document
+  .getElementById("rand-color-btn")
+  .addEventListener("click", randomColor);
+
+function randomColor() {
+  let colors = [
+    "Amber",
+    "Amethyst",
+    "Azure",
+    "Lavender",
+    "Magenta",
+    "Lilak",
+    "Cyan",
+    "Red",
+    "Green",
+    "Blue",
+    "Yellow",
+    "White",
+    "Purple",
+    "Honey Orange",
+    "Pink",
+    "Ivory",
+    "Crimson",
+    "Aqua Blue",
+    "Rose Gold",
+    "Gold",
+    "Steel Gray",
+    "Peach",
+    "Baby Blue",
+    "Olive Green",
+    "Mint Green",
+    "Creamy Pink",
+    "Royal Blue",
+    "Prussian Blue",
+    "Chocolate Brown",
+  ];
+  let randomColor = colors[Math.floor(Math.random() * colors.length)];
+  color_F.value = randomColor;
+  document.getElementById("celeb-color").innerText = randomColor;
+}
+
 //change ^ maritial status
 document
   .getElementById("rel-status-btn")
