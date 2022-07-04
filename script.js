@@ -475,6 +475,7 @@ function randomColor() {
   document.getElementById("celeb-color").innerText = randomColor;
 }
 
+//random food
 document.getElementById("rand-food-btn").addEventListener("click", randomFood);
 
 function randomFood() {
@@ -512,6 +513,44 @@ function randomFood() {
   let randomFood = foods[Math.floor(Math.random() * foods.length)];
   food_F.value = randomFood;
   document.getElementById("celeb-food").innerText = randomFood;
+}
+
+//random food
+document
+  .getElementById("rand-drink-btn")
+  .addEventListener("click", randomDrink);
+
+function randomDrink() {
+  let drinks = [
+    "Mojito",
+    "Apple Juice",
+    "Beet Juice",
+    "Blueberry Juice",
+    "Orange Juice",
+    "Pomegranate Juice",
+    "Pineapple Juice",
+    "Alovera Juice",
+    "Coconut water",
+    "Lemon Juice",
+    "Mango Juice",
+    "Papaya Juice",
+    "Avocado Juice",
+    "Coffee",
+    "Ice tea",
+    "Milk",
+    "Milk tea",
+    "Black coffee",
+    "Espresso",
+    "Latte",
+    "Cappuccino",
+    "Chocolate Milkshake",
+    "Woodapple juice",
+    "Falooda",
+    "Ice Coffee",
+  ];
+  let randomDrink = drinks[Math.floor(Math.random() * drinks.length)];
+  drink_F.value = randomDrink;
+  document.getElementById("celeb-drink").innerText = randomDrink;
 }
 
 //change ^ maritial status
