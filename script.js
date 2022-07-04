@@ -553,6 +553,27 @@ function randomDrink() {
   document.getElementById("celeb-drink").innerText = randomDrink;
 }
 
+//random animal
+document
+  .getElementById("rand-animal-btn")
+  .addEventListener("click", randomAnimal);
+
+function randomAnimal() {
+  let animals = [
+    "German Shepherd",
+    "Rottweiler",
+    "Labrador Retriever",
+    "Pomeranian Dog",
+    "Persian Cat",
+    "Cat",
+    "Dog",
+    "Bunny",
+  ];
+  let random_animal = animals[Math.floor(Math.random() * animals.length)];
+  animal_F.value = random_animal;
+  document.getElementById("celeb-animal").innerText = random_animal;
+}
+
 //change ^ maritial status
 document
   .getElementById("rel-status-btn")
