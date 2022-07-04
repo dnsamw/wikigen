@@ -433,6 +433,20 @@ function randomZodiacSign() {
   }
 }
 
+//change ^ maritial status
+document
+  .getElementById("rel-status-btn")
+  .addEventListener("click", changeMaritialStatus);
+let MARITIAL_STATUS_INDEX = 5;
+function changeMaritialStatus() {
+  const relStatus = ["Single", "Engaged", "Married", "Widowed", "Divorced"];
+  MARITIAL_STATUS_INDEX = (MARITIAL_STATUS_INDEX + 1) % 5;
+  console.log(relStatus[MARITIAL_STATUS_INDEX]);
+  document.getElementById("maritial-status").value =
+    relStatus[MARITIAL_STATUS_INDEX];
+  writeStatus();
+}
+
 //height
 let height_F = document.getElementById("height");
 height_F.addEventListener("input", writeHeight);

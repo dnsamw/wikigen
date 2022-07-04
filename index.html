@@ -82,7 +82,7 @@
           <span class="celeb_hair_color hl">long black straight</span> hair and
           <span class="celeb_eye_color hl">dark brown</span> eyes.
           <span class="celeb_n_name hl">[NickName]</span> is
-          <span class="celeb_maritial_state hl">[MaritialSttus]</span>
+          <span class="celeb_maritial_state hl">single</span>
           <span id="if-spouse hl"></span>.
         </div>
         <br />
@@ -260,7 +260,7 @@
                 </tr>
                 <tr>
                   <td>Boyfriend/Girlfriend</td>
-                  <td id="celeb-spouse">➖</td>
+                  <td id="celeb-spouse">Not Known</td>
                 </tr>
                 <tr>
                   <td>Debut Industry</td>
@@ -521,7 +521,7 @@
             <tbody>
               <tr>
                 <td>Marital Status</td>
-                <td id="celeb-maritial-status">Married</td>
+                <td id="celeb-maritial-status">Single</td>
               </tr>
               <tr>
                 <td>Marriage Date</td>
@@ -870,12 +870,21 @@
                 >
                 :</label
               >
-              <input
-                type="text"
-                name="maritial-status"
-                placeholder="Engaged"
-                id="maritial-status"
-              />
+              <div class="ib-grp">
+                <input
+                  type="text"
+                  name="maritial-status"
+                  placeholder="Engaged"
+                  id="maritial-status"
+                />
+                <button
+                  id="rel-status-btn"
+                  type="button"
+                  class="btn btn-sm btn-primary"
+                >
+                  ^
+                </button>
+              </div>
             </div>
             <div class="datafield">
               <label for="status"
