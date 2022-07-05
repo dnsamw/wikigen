@@ -208,3 +208,7 @@ input[type=text],input[type=date],input[type=checkbox],#readings, select {
     -ms-user-select: none;
     user-select: none;
 }
+
+#favorites-info >h3{
+    margin-top: 1rem;
+}

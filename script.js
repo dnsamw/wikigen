@@ -617,6 +617,17 @@ function randomHobby() {
   document.getElementById("celeb-hobby").innerText = randomHobby;
 }
 
+//randomize all favorite things at once
+document.getElementById("rand-fav-btn").addEventListener("click", randAllFav);
+function randAllFav() {
+  randomColor();
+  randomFood();
+  randomDrink();
+  randomAnimal();
+  randomCar();
+  randomHobby();
+}
+
 //change ^ maritial status
 document
   .getElementById("rel-status-btn")
