@@ -30,7 +30,7 @@ let nickName_F = document.getElementById("nick-name");
 nickName_F.addEventListener("input", writeNickName);
 
 function writeNickName() {
-  console.log(nickName_F.value);
+  //console.log(nickName_F.value);
   let nickName_A = document.getElementById("celeb-nick-name");
   nickName_A.innerText = nickName_F.value;
 
@@ -51,7 +51,7 @@ let profession_F = document.getElementById("profession");
 profession_F.addEventListener("input", writeProfession);
 
 function writeProfession() {
-  console.log(profession_F.value);
+  //console.log(profession_F.value);
   let profession_A = document.getElementById("celeb-profession");
   profession_A.innerText = profession_F.value;
 
@@ -103,7 +103,7 @@ function rmvFact() {
   let facts_L = document.getElementById("facts-list");
   let list = Array.from(facts_L.getElementsByTagName("li"));
   list.pop();
-  console.log(list);
+  //console.log(list);
   let tempNode = document.createElement("div");
   for (const l of list) {
     tempNode.appendChild(l);
@@ -155,7 +155,7 @@ gender_F.addEventListener("change", writeGender);
 function writeGender() {
   let paraGender = document.getElementById("para-gender");
   if (gender_F.checked) {
-    console.log("She");
+    //console.log("She");
     paraGender.innerText = "She";
 
     //para
@@ -178,7 +178,7 @@ function writeGender() {
       fn.innerText = "Her";
     }
   } else {
-    console.log("He");
+    //console.log("He");
     paraGender.innerText = "He";
 
     let celebGendersAct = document.getElementsByClassName(
@@ -235,9 +235,9 @@ function writeBirthday() {
   let bdate = new Date(str);
   let now = new Date();
   let age = Math.abs(bdate.getFullYear() - now.getFullYear());
-  console.log(age);
+  //console.log(age);
   let res = str.split("-"); // turn the date into a list format (Split by / if needed)
-  console.log(res);
+  //console.log(res);
   let months = [
     "January",
     "February",
@@ -252,10 +252,10 @@ function writeBirthday() {
     "November",
     "December",
   ];
-  console.log(months[parseInt(res[1], 10) - 1]); // month name
+  //console.log(months[parseInt(res[1], 10) - 1]); // month name
   formattedDate = `${res[0]}-${months[res[1] - 1]}-${res[2]}`;
   // formattedDateX = `${res[0]}-${months[res[1] - 1]}-${res[2]}`;
-  console.log("DATE", formattedDate);
+  //console.log("DATE", formattedDate);
   let birthday_A = document.getElementById("celeb-dob");
   let paraBirthday = document.getElementById("para-date");
   let age_A = document.getElementById("celeb-age");
@@ -278,7 +278,7 @@ let location_F = document.getElementById("location");
 location_F.addEventListener("input", writeLocation);
 
 function writeLocation() {
-  console.log(location_F.value);
+  //console.log(location_F.value);
   let location_A = document.getElementById("celeb-location");
   location_A.innerText = location_F.value;
 
@@ -368,7 +368,7 @@ let ethnicity_F = document.getElementById("ethnicity");
 ethnicity_F.addEventListener("input", writeEthnicity);
 
 function writeEthnicity() {
-  console.log(ethnicity_F.value);
+  //console.log(ethnicity_F.value);
   let ethnicity_A = document.getElementById("celeb-ethnicity");
   ethnicity_A.innerText = ethnicity_F.value;
 }
@@ -378,7 +378,7 @@ let religion_F = document.getElementById("religion");
 religion_F.addEventListener("input", writeReligion);
 
 function writeReligion() {
-  console.log(religion_F.value);
+  //console.log(religion_F.value);
   let religion_A = document.getElementById("celeb-religion");
   religion_A.innerText = religion_F.value;
 
@@ -393,7 +393,7 @@ let zodiacsign_F = document.getElementById("zodiac-sign");
 zodiacsign_F.addEventListener("input", writeZodiacSign);
 
 function writeZodiacSign() {
-  console.log(zodiacsign_F.value);
+  //console.log(zodiacsign_F.value);
   let zodiacsign_A = document.getElementById("celeb-zodiacsign");
   zodiacsign_A.innerText = zodiacsign_F.value;
 
@@ -423,7 +423,7 @@ function randomZodiacSign() {
     "Pisces",
   ];
   let randomSign = signArr[Math.floor(Math.random() * signArr.length)];
-  console.log(randomSign);
+  //console.log(randomSign);
   let celebZodiacSigns = document.getElementsByClassName("celeb_zodiac_sign");
   let zodiacsign_A = document.getElementById("celeb-zodiacsign");
   zodiacsign_F.value = randomSign;
@@ -636,7 +636,7 @@ let MARITIAL_STATUS_INDEX = 5;
 function changeMaritialStatus() {
   const relStatus = ["Single", "Engaged", "Married", "Widowed", "Divorced"];
   MARITIAL_STATUS_INDEX = (MARITIAL_STATUS_INDEX + 1) % 5;
-  console.log(relStatus[MARITIAL_STATUS_INDEX]);
+  //console.log(relStatus[MARITIAL_STATUS_INDEX]);
   document.getElementById("maritial-status").value =
     relStatus[MARITIAL_STATUS_INDEX];
   writeStatus();
@@ -647,7 +647,7 @@ let height_F = document.getElementById("height");
 height_F.addEventListener("input", writeHeight);
 
 function writeHeight() {
-  console.log(height_F.value);
+  //console.log(height_F.value);
   let height_A = document.getElementById("celeb-height");
 
   let height_Cm = document.getElementById("celeb-height-cm");
@@ -658,8 +658,8 @@ function writeHeight() {
   let heightCm1 = heightFI[0] * 30.48;
   let heightCm2 = heightFI[1] ? heightFI[1] * 2.54 : 0;
 
-  console.log(heightFI);
-  console.log(heightCm1 + heightCm2);
+  //console.log(heightFI);
+  //console.log(heightCm1 + heightCm2);
 
   let heightInFtIn = `${heightFI[0]} ft ${heightFI[1] ? heightFI[1] : 0} in`;
   let heightInCm = Math.floor(heightCm1 + heightCm2);
@@ -686,7 +686,7 @@ let weight_F = document.getElementById("weight");
 weight_F.addEventListener("input", writeWeight);
 
 function writeWeight() {
-  console.log(weight_F.value);
+  //console.log(weight_F.value);
   let weight_A = document.getElementById("celeb-weight");
   weight_A.innerText = `${weight_F.value} kg (${(
     weight_F.value * 2.20462
@@ -713,7 +713,7 @@ waist_F.addEventListener("input", writeWaist);
 hips_F.addEventListener("input", writeHips);
 
 function writeBreast() {
-  console.log(breast_F.value);
+  //console.log(breast_F.value);
   let breast_A_in = document.getElementById("celeb-breasts-in");
   let breast_A_cm = document.getElementById("celeb-breasts-cm");
   breast_A_in.innerText = breast_F.value;
@@ -728,7 +728,7 @@ function writeBreast() {
   }
 }
 function writeWaist() {
-  console.log(waist_F.value);
+  //console.log(waist_F.value);
   let waist_A_in = document.getElementById("celeb-waist-in");
   let waist_A_cm = document.getElementById("celeb-waist-cm");
   waist_A_in.innerText = waist_F.value;
@@ -742,7 +742,7 @@ function writeWaist() {
   }
 }
 function writeHips() {
-  console.log(hips_F.value);
+  //console.log(hips_F.value);
   let hips_A_in = document.getElementById("celeb-hips-in");
   let hips_A_cm = document.getElementById("celeb-hips-cm");
   hips_A_in.innerText = hips_F.value;
@@ -778,7 +778,7 @@ skin_F.addEventListener("input", writeSkin);
 
 function writeHair() {
   let hair_A = document.getElementById("celeb-hair");
-  console.log(hair_F);
+  //console.log(hair_F);
   hair_A.innerText = hair_F.value;
 
   let celebHairs = document.getElementsByClassName("celeb_hair_color");
@@ -788,7 +788,7 @@ function writeHair() {
 }
 function writeEyes() {
   let eyes_A = document.getElementById("celeb-eyes");
-  console.log(eyes_F);
+  //console.log(eyes_F);
   eyes_A.innerText = eyes_F.value;
 
   let celebEyes = document.getElementsByClassName("celeb_eye_color");
@@ -798,7 +798,7 @@ function writeEyes() {
 }
 function writeSkin() {
   let skin_A = document.getElementById("celeb-skin");
-  console.log(skin_F);
+  //console.log(skin_F);
   skin_A.innerText = skin_F.value;
 
   let celebSkins = document.getElementsByClassName("celeb_skin_color");
@@ -850,7 +850,7 @@ function writeAffairs() {
 
 function writeSpouse() {
   let spouse_A = document.getElementById("celeb-spousex");
-  console.log(spouse_F.value);
+  //console.log(spouse_F.value);
   spouse_A.innerText = spouse_F.value;
 
   let firstSpouses = document.getElementsByClassName("celeb_relationship");
